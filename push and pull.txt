@@ -1,0 +1,369 @@
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice
+$ mkdir all
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice
+$ cd all
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all
+$ git init
+Initialized empty Git repository in D:/github_practice/all/.git/
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ touch text
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git add text
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git commit -m"practce"
+[master (root-commit) f4eca56] practce
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 text
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git remote add origin https://github.com/ghousec125/devops-7.45.git
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git -u origin master
+unknown option: -u
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/ghousec125/devops-7.45.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git pusg
+git: 'pusg' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 200 bytes | 200.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ghousec125/devops-7.45.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ touch test1
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git commit -m"paractice1"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test1
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git add text1
+fatal: pathspec 'text1' did not match any files
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git test1
+git: 'test1' is not a git command. See 'git --help'.
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git add test1
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git commit -m"practice1"
+[master c83dd74] practice1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 228 bytes | 228.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ghousec125/devops-7.45.git
+   f4eca56..c83dd74  master -> master
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 659 bytes | 65.00 KiB/s, done.
+From https://github.com/ghousec125/devops-7.45
+   c83dd74..389df82  master     -> origin/master
+Updating c83dd74..389df82
+Fast-forward
+ text | 1 +
+ 1 file changed, 1 insertion(+)
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ cat text
+this fro ptactice
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git add text
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git push
+Everything up-to-date
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git commit -m"practice"
+[master cc4bbf7] practice
+ 1 file changed, 1 insertion(+)
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ghousec125/devops-7.45.git
+   389df82..cc4bbf7  master -> master
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git branch main
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git branch
+  main
+* master
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
+$ git checkout main
+Switched to branch 'main'
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ touch text2
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git add text2
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git commit -m"practice2"
+[main 7b7686f] practice2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 text2
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ ls
+test1  text  text2
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git push -u main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 256 bytes | 256.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/ghousec125/devops-7.45/pull/new/main
+remote:
+To https://github.com/ghousec125/devops-7.45.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git add text2
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git commit -m"prasctice2"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git push
+Everything up-to-date
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git add text2
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git commit -m"practice"
+[main 145b9ad] practice
+ 1 file changed, 1 insertion(+)
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 248 bytes | 248.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ghousec125/devops-7.45.git
+   7b7686f..145b9ad  main -> main
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 645 bytes | 58.00 KiB/s, done.
+From https://github.com/ghousec125/devops-7.45
+   145b9ad..b15f725  main       -> origin/main
+Updating 145b9ad..b15f725
+Fast-forward
+ text2 | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ cat text2
+ghous
+from remote
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git -r
+unknown option: -r
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git branch -r
+  origin/main
+  origin/master
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git branch -a
+* main
+  master
+  remotes/origin/main
+  remotes/origin/master
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git log
+commit b15f725f9cdc8c741ef7c6445e89809a98192c2e (HEAD -> main, origin/main)
+Author: ghousec125 <94891314+ghousec125@users.noreply.github.com>
+Date:   Thu Nov 25 11:44:55 2021 +0530
+
+    Update text2
+
+commit 145b9adb2ac37963887ef2f6742d8de5ac13f955
+Author: ghousec125 <ghousec125@gmail.com>
+Date:   Thu Nov 25 11:43:54 2021 +0530
+
+    practice
+
+commit 7b7686f669c931028d494f8bfbfa5bbce00a20bb
+Author: ghousec125 <ghousec125@gmail.com>
+Date:   Thu Nov 25 11:37:10 2021 +0530
+
+    practice2
+
+commit cc4bbf7eb37e4d1037469fc71b860467d1691da8 (origin/master, master)
+Author: ghousec125 <ghousec125@gmail.com>
+Date:   Thu Nov 25 11:35:41 2021 +0530
+
+    practice
+
+commit 389df823224343633b5f6fd5f6afd5e5dc149c9e
+Author: ghousec125 <94891314+ghousec125@users.noreply.github.com>
+Date:   Thu Nov 25 11:33:38 2021 +0530
+
+    Update text
+
+commit c83dd745c0ecf34976d4e38d0fbdcb7dade725a9
+Author: ghousec125 <ghousec125@gmail.com>
+Date:   Thu Nov 25 11:32:46 2021 +0530
+
+    practice1
+
+commit f4eca56493e05a03b7631d994573c9251f3aaca6
+Author: ghousec125 <ghousec125@gmail.com>
+Date:   Thu Nov 25 11:28:16 2021 +0530
+
+    practce
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (main)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all (master)
