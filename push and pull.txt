@@ -1,9 +1,9 @@
 
 Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice
-$ ghouse
+$ ghouse 213
 
 Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice
-$ cd all
+$ cd all 213
 
 Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice/all
 $ git init
