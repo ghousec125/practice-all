@@ -1,6 +1,6 @@
 
 Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice
-$ mkdir all
+$ ghouse
 
 Ghouse@LAPTOP-79FMIPAH MINGW64 /d/github_practice
 $ cd all
